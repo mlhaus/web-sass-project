@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100%; }
+
+.container {
+  max-width: 1080px;
+  padding: 0 1.5rem;
+  margin: 0 auto;
+  overflow: hidden; }
+
+.btn {
+  padding: 0.8rem 2rem;
+  cursor: pointer;
+  border: none;
+  display: inline-block;
+  margin-top: 1rem;
+  -webkit-transition: background-color 0.5s;
+  -moz-transition: background-color 0.5s;
+  -ms-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  transition: background-color 0.5s; }
+
+body {
+  font-family: 'Dosis', sans-serif;
+  line-height: 1.6; }
+
+a {
+  text-decoration: none;
+  color: #333; }
+
+ul {
+  list-style: none; }
+
+h2, h3, h4 {
+  text-transform: uppercase; }
+
+#header-home {
+  background: url("../assets/northern-lights-hd.jpg") no-repeat center 75%/cover;
+  height: 70vh;
+  color: #fff; }
+
+#header-content {
+  text-align: center;
+  padding-top: 4em; }
+  #header-content h1 {
+    font-size: 4rem;
+    line-height: 1.3; }
+    #header-content h1 .txt {
+      border-right: 3px solid #f4f4f4;
+      -webkit-animation: borderBlink 1s step-end infinite;
+      animation: borderBlink 1s step-end infinite; }
+
+@-webkit-keyframes borderBlink {
+  from, to {
+    border-color: transparent; }
+  50% {
+    border-color: black; } }
+
+@keyframes borderBlink {
+  from, to {
+    border-color: transparent; }
+  50% {
+    border-color: black; } }
+
+#logo {
+  height: 70px; }
+
+.lead {
+  background-color: rgba(225, 225, 225, 0.25);
+  font-size: 20px; }
+
+#main-nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem; }
+  #main-nav ul {
+    display: flex;
+    padding-top: 1rem; }
+    #main-nav ul a {
+      padding: 1rem 1.5rem;
+      color: #f4f4f4;
+      text-tranform: uppercase;
+      border-bottom: 3px transparent solid;
+      transition: border-color 0.5s; }
+      #main-nav ul a:hover {
+        border-color: #ccc; }
+      #main-nav ul a.current {
+        border-color: #ffbc00; }
+
+.btn-main {
+  background-color: #ffbc00;
+  color: #333; }
+  .btn-main:hover {
+    background-color: #ffc933; }
+
+.btn-light {
+  background-color: #f4f4f4;
+  color: #333; }
+  .btn-light:hover {
+    background-color: #dbdbdb; }
+
+.btn-dark {
+  background-color: #333;
+  color: #f4f4f4; }
+  .btn-dark:hover {
+    background-color: #4d4d4d; }
