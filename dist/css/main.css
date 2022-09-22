@@ -22,6 +22,30 @@
   -o-transition: background-color 0.5s;
   transition: background-color 0.5s; }
 
+.py-1 {
+  padding: 1rem 0; }
+
+.py-2 {
+  padding: 2rem 0; }
+
+.py-3 {
+  padding: 3rem 0; }
+
+.py-4 {
+  padding: 4rem 0; }
+
+.my-1 {
+  margin: 1rem 0; }
+
+.my-2 {
+  margin: 2rem 0; }
+
+.my-3 {
+  margin: 3rem 0; }
+
+.my-4 {
+  margin: 4rem 0; }
+
 body {
   font-family: 'Dosis', sans-serif;
   line-height: 1.6; }
@@ -37,7 +61,7 @@ h2, h3, h4 {
   text-transform: uppercase; }
 
 #header-home {
-  background: url("../assets/northern-lights-hd.jpg") no-repeat center 75%/cover;
+  background: url("../assets/northern-lights-hd.jpg") #333 no-repeat center 75%/cover;
   height: 70vh;
   color: #fff; }
 
@@ -106,3 +130,8 @@ h2, h3, h4 {
   color: #f4f4f4; }
   .btn-dark:hover {
     background-color: #4d4d4d; }
+
+#home-a .specializations {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem; }

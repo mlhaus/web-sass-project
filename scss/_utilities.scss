@@ -1,0 +1,57 @@
+@import "functions";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.container {
+  max-width: $website-width;
+  padding: 0 1.5rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+%btn-shared {
+  padding: 0.8rem 2rem;
+  cursor: pointer;
+  border: none;
+  display: inline-block;
+  margin-top: 1rem;
+  @include transition(background-color 0.5s);
+}
+
+.py {
+  &-1 {
+    padding: 1rem 0;
+  }
+  &-2 {
+    padding: 2rem 0;
+  } 
+  &-3 {
+    padding: 3rem 0;
+  }
+  &-4 {
+    padding: 4rem 0;
+  }
+}
+
+.my {
+  &-1 {
+    margin: 1rem 0;
+  }
+  &-2 {
+    margin: 2rem 0;
+  }
+  &-3 {
+    margin: 3rem 0;
+  }
+  &-4 {
+    margin: 4rem 0;
+  }
+}
+
+
+
