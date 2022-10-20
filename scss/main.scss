@@ -1,6 +1,7 @@
 @import "variables";
 @import "utilities";
 @import "functions";
+@import "item_grid";
 
 body {
   font-family: 'Dosis', sans-serif;
@@ -12,20 +13,33 @@ a {
   color: $dark-color;
 }
 
-ul {
-  list-style: none;
+h2, h3, h4 {
+  text-transform: capitalize;
 }
 
-h2, h3, h4 {
-  text-transform: uppercase;
+.section-title {
+  font-size: 2.5rem;
 }
 
 #header {
   &-home {
-    background: url("../assets/northern-lights-hd.jpg") $dark-color no-repeat center 75% / cover;
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
     height: 70vh;
     color: #fff;
+
+    #logo {
+      height: 70px;
+    }
+
+    .lead {
+      background-color: $light-transparent-color;
+      font-size: 20px;
+    }
   }
+
+
+
   &-content {
     text-align: center;
     padding-top: 4em;
@@ -57,17 +71,19 @@ h2, h3, h4 {
       }
     }
   }
+  &-inner {
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    height: 6rem;
+    color: #fff;
 
+    #logo {
+      height: 70px;
+    }
+  }
 }
 
-#logo {
-  height: 70px;
-}
 
-.lead {
-  background-color: $light-transparent-color;
-  font-size: 20px;
-}
 
 #main-nav {
   display: flex; // Place logo and nav bar side-by-side
@@ -77,11 +93,12 @@ h2, h3, h4 {
   ul {
     display: flex; // Placing nav bar items side-by-side
     padding-top: 1rem;
+    list-style: none; /* Remove bullets from navigation */
 
     a {
       padding: 1rem 1.5rem;
       color: $light-color;
-      text-tranform: uppercase;
+      text-transform: uppercase;
       border-bottom: 3px transparent solid;
       transition: border-color 0.5s;
 
@@ -132,6 +149,263 @@ h2, h3, h4 {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 1rem;
+      margin-top: 2rem;
+
+      .fa-solid {
+        color: $main-color;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  &-b {
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      div {
+        padding: 3rem;
+
+        &:nth-child(odd) {
+          background-color: $light-color;
+        }
+        &:nth-child(even) {
+          background-color: $medium-color;
+
+        }
+      }
+
+      li {
+        line-height: 2;
+        list-style-type: none;
+
+
+        &.stats-title {
+          font-size: 1.5rem;
+        }
+
+        &.stats-number {
+          font-size: 2rem;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  &-c {
+    .process {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 1.5rem;
+      text-align: center;
+
+      &-icon {
+        border-radius: 50%;
+        background-color: $dark-color;
+        color: #fff;
+        padding: 2rem;
+        width: 150px;
+        height: 150px;
+        line-height: 80px;
+        text-align: center;
+        position: relative;
+        transition: background-color 0.5s;
+
+        &:hover {
+          background-color: $main-color;
+
+          .process-step {
+            background-color: $dark-color;
+
+          }
+        }
+      }
+
+      &-step {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 35px;
+        width: 35px;
+        line-height: 5px;
+        text-align: center;
+        border-radius: 50%;
+        background-color: $main-color;
+        color: $light-color;
+        padding: 1rem 0;
+        font-size: 20px;
+        transition: background-color 0.5s;
+      }
     }
   }
 }
+
+.footer {
+  background-color: $dark-color;
+  color: $light-color;
+
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+
+    .social .fa-brands {
+      color: $light-color;
+      margin-left: 1rem;
+      width: 45px;
+      height: 45px;
+      line-height: 30px;
+      text-align: center;
+      border: 1px solid $light-color;
+      padding: 0.5rem;
+      border-radius: 50%;
+      transition: background-color 0.5s;
+      &:hover {
+        background-color: $main-color;
+      }
+    }
+  }
+}
+
+.about {
+  &-a {
+    i {
+      color: $main-color;
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+  }
+  &-info {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-areas:
+      "image bio bio"
+      "about1 about2 about3"
+    ;
+    grid-gap: 1rem;
+
+    .bio-image {
+      grid-area: image;
+      margin-bottom: 2rem;
+    }
+
+    .bio {
+      grid-area: bio;
+      border-left: 5px solid $main-color;
+      padding: 1rem;
+      text-align: left;
+      margin-bottom: 2rem;
+
+      ul, ol {
+        padding-left: 1.5rem;
+      }
+    }
+  }
+  &-1 {
+    grid-area: about3;
+  }
+  &-2 {
+    grid-area: about2;
+  }
+  &-3 {
+    grid-area: about1;
+  }
+
+  &-logos {
+    display: flex;
+    justify-content: space-around;
+    
+  }
+
+  &-d {
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 0.5rem;
+      margin-top: 2rem;
+
+      .testimonial {
+
+        ul {
+          list-style: none;
+          margin: 1rem 0;
+          display: flex;
+          justify-content: center;
+        }
+        p {
+          border: 1px solid $medium-color;
+          border-radius: 10px;
+          padding: 1rem;
+        }
+        img {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+}
+
+#contact {
+  &-a {
+    .text-fields {
+      display: grid;
+      grid-template-areas:
+        'name email'
+        'subject phone'
+        'message message'
+      ;
+      grid-gap: 1rem;
+      margin-bottom: 1.5rem;
+
+      .name-input {
+        grid-area: name;
+      }
+      .email-input {
+        grid-area: email;
+      }
+      .subject-input {
+        grid-area: subject;
+      }
+      .phone-input {
+        grid-area: phone;
+      }
+      .message-input {
+        grid-area: message;
+        width: 100%;
+        height: 100px;
+      }
+
+      .text-input {
+        padding: 0.5rem 1rem;
+        font-family: 'Dosis', sans-serif;
+        font-size: 1rem;
+      }
+
+      button[type='submit'] {
+        @extend %btn-shared;
+        width: 200px;
+      }
+    }
+  }
+
+  &-b {
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      text-align: center;
+
+      a {
+        color: $light-color;
+
+      }
+      a:hover {
+        color: $medium-color;
+      }
+    }
+  }
+}
+
+@import "media";

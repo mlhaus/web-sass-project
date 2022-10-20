@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Me | Marc Hauschildt</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+          integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+          integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+          crossorigin=""/>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<header id="header-inner">
+    <div class="container">
+        <nav id="main-nav">
+            <img src="img/logo-MH.png" alt="Marc Hauschildt" id="logo">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html" class="current">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section id="contact-a" class="text-center py-3">
+    <div class="container">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="bottom-line"></div>
+        <p class="lead">Here's how you can reach me.</p>
+
+        <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+            <div class="text-fields">
+                <input name="name" type="text" class="text-input name-input" placeholder="Your name" required>
+                <input name="subject" type="text" class="text-input subject-input" placeholder="Subject" required>
+                <input name="email" type="text" class="text-input email-input" placeholder="Your email address" required>
+                <input name="phone" type="text" class="text-input phone-input" placeholder="Your phone">
+                <textarea name="message" id="" class="text-input message-input" placeholder="Enter a message"></textarea>
+                <div data-netlify-recaptcha="true"></div>
+                <button class="btn-main" type="submit">Send</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+
+<section id="contact-b" class="py-3 bg-dark">
+    <div class="container">
+        <div class="contact-info">
+            <div><a href="mailto:marc.hauschildt@gmail.com">
+                <i class="fa-solid fa-envelope fa-2x"></i>
+                <h3>E-mail</h3>
+                <p>marc.hauschildt@gmail.com</p>
+            </a></div>
+
+            <div><a href="tel:319-930-0000">
+                <i class="fa-solid fa-phone fa-2x"></i>
+                <h3>Phone</h3>
+                <p>319-930-0000</p>
+            </a></div>
+
+            <div><a href="https://goo.gl/maps/Hc1G3b6imcN3gWRY7" target="_blank">
+                <i class="fa-solid fa-address-card fa-2x"></i>
+                <h3>Address</h3>
+                <p>6301 Kirkwood Blvd SW<br>Cedar Rapids, IA 52245</p>
+            </a></div>
+        </div>
+    </div>
+</section>
+
+<section id="contact-c" class="py-3 text-center bg-main">
+    <div class="container">
+        <div id="map"></div>
+    </div>
+</section>
+
+
+<footer class="footer">
+    <div class="container footer-content">
+        <p>Copyright &copy; 2020-
+            <script>document.write(new Date().getFullYear());</script>
+            Marc Hauschildt. All rights reserved.
+        </p>
+        <div class="social">
+            <a href="https://twitter.com/mlhauschildt" target="_blank"><i class="fa fa-brands fa-twitter"></i></a>
+            <a href="https://instagram.com/mlhauschildt" target="_blank"><i class="fa fa-brands fa-instagram"></i></a>
+            <a href="https://linkedin.com/mlhaus" target="_blank"><i class="fa fa-brands fa-linkedin"></i></a>
+        </div>
+    </div>
+</footer>
+<script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+        integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
+        crossorigin=""></script>
+<script src="js/leaflet.js"></script>
+</body>
+</html>
