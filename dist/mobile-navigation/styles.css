@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    font: 18px/1.4 -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    background-color: white;
+}
+.site-name {
+    padding-left: 1em;
+}
+h1 {
+    font-size: 1.4em;
+    line-height: 1.2;
+}
+h2 {
+    margin: 1.5em 0 0;
+    font-size: 1.1em;
+    color: #eb4;
+}
+p {
+    padding-left: 1em;
+}
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid black;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    background-color: aliceblue;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    width: 400px;
+}
+
+.logo svg {
+    width: 50px;
+    margin-right: 1rem;
+}
+
+.logo h3 {
+    font-size: 2.5rem;
+}
+
+.hamburger {
+    display: none;
+}
+
+.site-navigation {
+    display: block;
+}
+
+.mobile-navigation {
+    display: none;
+}
+
+.site-navigation ul, .mobile-navigation ul {
+    display: flex;
+    list-style: none;
+}
+
+.site-navigation a, .mobile-navigation a {
+    display: block;
+    padding: 0.75rem 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.site-navigation a:hover, .site-navigation a:focus,
+.mobile-navigation a:hover, .mobile-navigation a:focus {
+    background-color: #eebb44;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.2);
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+.is-open {
+    display: block;
+}
+
+
+@media (max-width: 880px) {
+    header {
+        position: relative;
+    }
+
+    .hamburger {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 32px;
+        height: 32px;
+        border: 0;
+        cursor: pointer;
+        background-color: inherit;
+    }
+
+    .hamburger svg {
+        fill: black;
+    }
+
+    .site-navigation {
+        display: none;
+    }
+
+    .mobile-navigation {
+        position: absolute;
+        top: 100%; /* position the navigation at the bottom of the header */
+        left: 50%;
+        right: 0; /* stretch half way across the entire page width */
+        background-color: rgba(225, 225, 225, 0.95);
+    }
+
+    .mobile-navigation ul {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 500px) {
+    header {
+        align-items: flex-end;
+    }
+    .logo {
+        flex-direction: column;
+    }
+    .logo h3 {
+        font-size: 1.75rem;
+        text-align: center;
+    }
+    .hamburger {
+        position: absolute;
+        right: 20px;
+        bottom: 25px;
+    }
+    .mobile-navigation {
+        left: 0; /* stretch across whole page */
+    }
+}
